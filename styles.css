@@ -8,7 +8,7 @@
     justify-content: space-between;
     align-items: center;
     z-index: 100;
-    background: rgba(0,0,0,0.5);
+    background: rgba(0, 0, 0, 0.5);
 }
 
 .nav-links {
@@ -37,7 +37,6 @@
     width: 1px;
     height: 20px;
     background: white;
-    margin: 0 1rem;
 }
 
 .menu-icon img {
@@ -45,13 +44,20 @@
     cursor: pointer;
 }
 
+.principal-image {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    object-position: center 25%;
+    margin: 0;
+    position: relative;
+}
 
 
 .footer {
     background: #000;
     color: white;
     padding: 4rem 2rem;
-    position: fixed;
     bottom: 0;
     width: 100%;
 }
