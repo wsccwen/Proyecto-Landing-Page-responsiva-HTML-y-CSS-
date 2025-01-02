@@ -1,3 +1,7 @@
+* {
+    scrollbar-width: none;
+}
+
 .header {
     position: fixed;
     top: 0;
@@ -47,7 +51,7 @@
     position: absolute;
     left: 4px;
     display: flex;
-    width: 500px;
+    max-width: 100%;
     color: white;
 }
 
@@ -101,6 +105,7 @@
 .real-estate-title {
     font-size: 60px;
     font-weight: 800;
+    white-space: nowrap;
     color: white;
     margin: 0;
 }
@@ -118,11 +123,12 @@
 
 .search-container {
     top: 100px;
-    width: 343px;
+    max-width: 343px;
     position:absolute;
     display: flex;
     right: 66px;
     color: white;
+    z-index: 10;
 }
 
 .search-input{
@@ -144,7 +150,6 @@
 
 .principal-image-container {
     position: relative;
-    width: 100%;
     height: 120vh;
 }
 
@@ -155,7 +160,7 @@
     object-position: center 25%;
     margin: 0;
     display: block;
-    filter: brightness(50%) contrast(150%);
+    filter: brightness(50%) contrast(100%);
 }
 
 .principal-image-container::after {
@@ -163,7 +168,6 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
     height: 100%;
     mix-blend-mode: soft-light;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 15%, transparent 100%);
@@ -244,12 +248,127 @@
     color: white;
 }
 
+.developments-section {
+    margin: 50px 70px 30px 70px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.developments-title {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.developments-title h2 {
+    font-size: 50px;
+    margin: 0;
+}
+
+.developments-title h3 {
+    font-size: 25px;
+    color: #DF991B;
+    margin: 0;
+}
+
+.developments-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.development-item h4 {
+    text-align: left;
+    font-size: 25px;
+    margin-left: 25px;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.development-item h5 {
+    text-align: left;
+    font-size: 15px;
+    margin-left: 25px;
+    color:#464547;
+    margin-top: 30px;
+    margin-bottom: 0;
+}
+
+.development-image {
+    width: 100%;
+    max-width: 300px;
+    height: 180px;
+    object-fit: cover;
+}
+
+.submit-email {
+    margin-left: 4%;
+    margin-right: 4%;
+    background-color: #464547;
+    margin-top: 0px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row: 1/3;
+    grid-column: 1/3;
+    z-index: 999;
+    padding: 20px 60px;
+    gap: 20px;
+    grid-template-rows: auto 1fr;
+    transform: translate(0, 50%);
+}
+
+.email-left h2 {
+    color: white;
+    margin: 0;
+    font-size: 40px;
+}
+
+.email-left h3 {
+    color: #DF991B;
+    font-size: 25px;
+    font-weight: lighter;
+    margin: 30px 0 0 0;
+}
+
+.email-right {
+    margin: 30px 0 0 0;
+}
+
+.email-input{
+    background-color: transparent;
+    height:45px;
+    width: 90%;
+    border: #7E7E7E solid 1px;
+    border-radius: 50px;
+    padding: 1px 24px;
+    margin: 10px 0 20px 0;
+}
+
+.email-span{
+    color: white;
+    margin: 0 0 50px 30px;
+}
+
+.submit-button {
+    background-color: transparent;
+    border: solid 1px #DF991B;
+    border-radius: 50px;
+    padding: 11px 24px;
+    width: 50%;
+    color: #DF991B;
+    font-size: large;
+    margin: 0 0 0 48%;
+}
+
 .footer {
     background: #000;
     color: white;
-    padding: 4rem 2rem;
+    padding: 12rem 2rem 1rem 2rem;
     bottom: 0;
-    width: 100%;
 }
 
 .footer hr {
@@ -283,6 +402,8 @@
 .contact-info h3 {
     font-size: 1.2rem;
     margin-bottom: 1rem;
+    margin-right: 4rem;
+    text-align: right;
 }
 
 .phone {
