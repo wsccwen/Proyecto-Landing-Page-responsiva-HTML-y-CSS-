@@ -160,7 +160,7 @@
     object-position: center 25%;
     margin: 0;
     display: block;
-    filter: brightness(50%) contrast(100%);
+    filter: brightness(25%) contrast(100%);
 }
 
 .principal-image-container::after {
@@ -170,7 +170,7 @@
     left: 0;
     height: 100%;
     mix-blend-mode: soft-light;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 15%, transparent 100%);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 30%, transparent 100%);
     pointer-events: none;
     z-index: 5;
 }
